@@ -27,3 +27,47 @@ You can import the data using `./build.sh [DATABASE_NAME]` or simply `make` to u
 The data archives are never downloaded from the internet if they already exist, nor are files unzipped if the extract target already exists. The makefile makes available a utility for removing all of the locally downloaded data:
 
     make clean
+
+
+## Data Structures
+
+```
+ons_output_area=# \d+ public.*
+                                 Table "public.lower_super_output_areas"
+        Column        | Type | Modifiers | Storage  |                     Description
+----------------------+------+-----------+----------+-----------------------------------------------------
+ lsoa_code_2001       | text |           | extended | LSOA01CD - 2001 lower layer super output area code
+ lsoa_name_2001       | text |           | extended | LSOA01NM - 2001 lower layer super output area name
+ lsoa_code            | text |           | extended | LSOA11CD - 2011 lower layer super output area code
+ lsoa_name            | text |           | extended | LSOA11NM - 2011 lower layer super output area name
+ change_ind           | text |           | extended | CHGIND - change indicator
+ authority_code       | text |           | extended | LAD11CD - 2011 local authority district code
+ authority_name       | text |           | extended | LAD11NM - 2011 local authority district name
+ authority_welsh_name | text |           | extended | LAD11NMW - 2011 local authority district Welsh name
+Has OIDs: no
+
+                                 Table "public.middle_super_output_areas"
+        Column        | Type | Modifiers | Storage  |                     Description
+----------------------+------+-----------+----------+-----------------------------------------------------
+ msoa_code_2001       | text |           | extended | MSOA01CD - 2001 middle layer super output area code
+ msoa_name_2001       | text |           | extended | MSOA01NM - 2001 middl layer super output areaname
+ msoa_code            | text |           | extended | MSOA11CD - 2011 middle layr super output area code
+ msoa_name            | text |           | extended | MSOA11NM - 2011 middle layr super output area name
+ change_ind           | text |           | extended | CHGIND - change indicator
+ authority_code       | text |           | extended | LAD11CD - 2011 local authority district code
+ authority_name       | text |           | extended | LAD11NM - 2011 local authority district name
+ authority_welsh_name | text |           | extended | LAD11NMW - 2011 local authority district Welsh name
+Has OIDs: no
+
+                                         Table "public.output_areas"
+        Column        | Type | Modifiers | Storage  |                       Description
+----------------------+------+-----------+----------+---------------------------------------------------------
+ oa_code_2001         | text |           | extended | OA01CD - 2001 output area nine character code
+ oa_code_2001_old     | text |           | extended | OA01CDO - 2001 output area old style ten character code
+ oa_code              | text |           | extended | OA11CD - 2011 output area nine character code
+ change_ind           | text |           | extended | CHGIND - change indicator
+ authority_code       | text |           | extended | LAD11CD - 2011 local authority district code
+ authority_name       | text |           | extended | LAD11NM - 2011 local authority district names
+ authority_welsh_name | text |           | extended | LAD11NMW - 2011 local authority district Welsh names
+Has OIDs: no
+```
