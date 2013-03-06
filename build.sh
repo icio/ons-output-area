@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 cd $(dirname $0)
 
-export DB=${1:-ons_output_area}
+export DB=${@:-ons_output_area}
 
 function main() {
     createdb $DB

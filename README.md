@@ -27,8 +27,3 @@ You can import the data using `./build.sh [DATABASE_NAME]` or simply `make` to u
 The data archives are never downloaded from the internet if they already exist, nor are files unzipped if the extract target already exists. The makefile makes available a utility for removing all of the locally downloaded data:
 
     make clean
-
-
-## TODO
-
-* Pass the arguments given to `build.sh` on to `psql` calls within it so that the end user can specify connection parameters.
